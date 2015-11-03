@@ -15,39 +15,43 @@ import com.iteso.singleton.tables.Table4;
 public class Waiter4 extends Waiter {
 
     TableOrder table;
-    public void getTable(int tableNumber){
+    public TableOrder getTable(int tableNumber){
 
         switch(tableNumber) {
-            case 1: table = Table1.getInstance(); break;
-            case 2: table = Table2.getInstance(); break;
-            case 3: table = Table3.getInstance(); break;
-            case 4: table = Table4.getInstance(); break;
+            case 1: return Table1.getInstance();
+            case 2: return Table2.getInstance();
+            case 3: return Table3.getInstance();
+            case 4: return Table4.getInstance();
         }
+        return null;
     }
 
     @Override
-    public void addDrink(int tableNumber, Drink drink) {
+    public boolean addDrink(int tableNumber, Drink drink) {
         System.out.println("Soy el mesero 4 y estoy sirviendo una bebida");
-
+        table = getTable(tableNumber);
         table.addDrink(drink);
+        return true;
     }
 
     @Override
-    public void addDish(int tableNumber, Dish dish) {
+    public boolean addDish(int tableNumber, Dish dish) {
 
         System.out.println("Soy el mesero 4 y estoy sirviendo un platillo");
-
+        table = getTable(tableNumber);
         table.addDish(dish);
+        return true;
     }
 
     @Override
-    public void giveCheck(int tableNumber) {
+    public boolean giveCheck(int tableNumber) {
 
         System.out.println("Soy el mesero 4 y estoy trayendo la cuenta");
-
+        table = getTable(tableNumber);
         table.printCheck();
         table.clearDishes();
         table.clearDrinks();
+        return true;
     }
     
 }

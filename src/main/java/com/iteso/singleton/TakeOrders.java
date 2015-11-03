@@ -45,7 +45,7 @@ public class TakeOrders {
         hamburguesa.setDescription("hamburguesa");
         hamburguesa.setPrice(55);
 
-        pozole.setName("pozole");
+        pozole.setDescription("pozole");
         pozole.setPrice(40);
 
         sushi.setDescription("sushi");
@@ -56,6 +56,43 @@ public class TakeOrders {
 
 
         /* ORDENES */
+
+        waiter1.addDrink(1, sprite);
+        waiter1.addDrink(2, coca);
+        waiter1.addDish(1, hamburguesa);
+        waiter1.addDish(1, pozole);
+
+        waiter2.addDrink(3, mirinda);
+        waiter2.addDrink(2, pepsi);
+        waiter2.addDish(1, sushi);
+        waiter2.addDish(4, taco);
+
+        waiter3.addDrink(1, mirinda);
+        waiter3.addDrink(1, pepsi);
+        waiter3.addDish(1, sushi);
+        waiter3.addDish(1, taco);
+
+        waiter4.addDrink(3, coca);
+        waiter4.addDrink(2, pepsi);
+        waiter4.addDish(1, sushi);
+        waiter4.addDish(3, taco);
+
+
+        System.out.println();
+        waiter1.giveCheck(1);
+
+        System.out.println();
+        waiter2.giveCheck(2);
+
+        System.out.println();
+        waiter3.giveCheck(3);
+
+        System.out.println();
+        waiter4.giveCheck(4);
+
+
+
+
 
 
 

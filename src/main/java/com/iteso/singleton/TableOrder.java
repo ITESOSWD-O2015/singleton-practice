@@ -30,7 +30,7 @@ public abstract class TableOrder {
         dishes.add(dish);
     }
 
-    public void printCheck(){
+    public boolean printCheck(){
         float total = 0;
         Drink dr;
         Dish ds;
@@ -39,15 +39,19 @@ public abstract class TableOrder {
         System.out.println("Drinks:");
         for (i = 0; i < drinks.size(); i++){
             dr = (Drink) drinks.get(i);
-            System.out.println(dr.getWaiter() + ": " + dr.getName()+ " " + dr.getPrice());
+            System.out.print(dr.getDescription() + ", ");
             total += dr.getPrice();
         }
+        System.out.println();
         System.out.println("Dishes:");
         for (i = 0; i < dishes.size(); i++){
             ds = (Dish) dishes.get(i);
-            System.out.println(ds.getWaiter() + ": " + ds.getName()+ " " + ds.getPrice());
+            System.out.print(ds.getDescription() + ", ");
             total += ds.getPrice();
         }
+        System.out.println();
         System.out.println("Total: $" + total);
+
+        return true;
     }
 }
