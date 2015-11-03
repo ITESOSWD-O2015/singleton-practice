@@ -3,6 +3,7 @@ package com.iteso.singleton;
 import com.iteso.singleton.tables.Table1;
 import com.iteso.singleton.tables.Table2;
 import com.iteso.singleton.tables.Table4;
+import com.iteso.singleton.waiters.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,90 +14,61 @@ import com.iteso.singleton.tables.Table4;
  */
 public class TakeOrders {
     public static void main (String[] args){
-        TableOrder order;
-        Drink drink;
-        Dish dish;
 
-        order = Table4.getInstance();
+        Waiter waiter1 = new Waiter1();
+        Waiter waiter2 = new Waiter2();
+        Waiter waiter3 = new Waiter3();
+        Waiter waiter4 = new Waiter4();
 
-        drink = new Drink();
-        drink.setName("Coke");
-        drink.setWaiter("Waiter A");
-        drink.setPrice(10);
-        order.addDrink(drink);
+        Drink pepsi   = new Drink();
+        Drink coca    = new Drink();
+        Drink sprite  = new Drink();
+        Drink mirinda = new Drink();
 
-        order = Table1.getInstance();
-        drink = new Drink();
-        drink.setName("Coke");
-        drink.setWaiter("Waiter B");
-        drink.setPrice(10);
-        order.addDrink(drink);
+        Dish hamburguesa = new Dish();
+        Dish pozole      = new Dish();
+        Dish sushi       = new Dish();
+        Dish taco        = new Dish();
 
-        order = Table4.getInstance();
-        drink = new Drink();
-        drink.setName("Coke");
-        drink.setWaiter("Waiter B");
-        drink.setPrice(10);
-        order.addDrink(drink);
+        pepsi.setDescription("pepsi");
+        pepsi.setPrice(10);
 
-        order = Table4.getInstance();
+        coca.setDescription("coca");
+        coca.setPrice(15);
 
-        dish = new Dish();
-        dish.setName("Enchilada");
-        dish.setPrice(8);
-        dish.setWaiter("Waiter C");
-        order.addDish(dish);
+        sprite.setDescription("sprite");
+        sprite.setPrice(8);
 
-        dish = new Dish();
-        dish.setName("Enchilada");
-        dish.setPrice(8);
-        dish.setWaiter("Waiter C");
-        order.addDish(dish);
+        mirinda.setDescription("mirinda");
+        mirinda.setPrice(6);
 
-        order = Table4.getInstance();
-        dish = new Dish();
-        dish.setName("Chicken Pozole");
-        dish.setPrice(45);
-        dish.setWaiter("Waiter B");
-        order.addDish(dish);
+        hamburguesa.setDescription("hamburguesa");
+        hamburguesa.setPrice(55);
 
-        order = Table2.getInstance();
-        dish = new Dish();
-        dish.setName("Tostada de Pata");
-        dish.setPrice(28);
-        dish.setWaiter("Waiter D");
-        order.addDish(dish);
+        pozole.setName("pozole");
+        pozole.setPrice(40);
 
-        order = Table4.getInstance();
-        dish = new Dish();
-        dish.setName("Quesadilla Chicharron");
-        dish.setPrice(18);
-        dish.setWaiter("Waiter A");
-        order.addDish(dish);
+        sushi.setDescription("sushi");
+        sushi.setPrice(30);
 
-        order = Table4.getInstance();
-        dish = new Dish();
-        dish.setName("Tostada de Pata");
-        dish.setPrice(28);
-        dish.setWaiter("Waiter D");
-        order.addDish(dish);
+        taco.setDescription("taco");
+        taco.setPrice(20);
 
-        order = Table1.getInstance();
-        order.printCheck();
 
-        order = Table4.getInstance();
-        order.printCheck();
+        /* ORDENES */
 
-        Table4.clearOrder();
 
-        order = Table4.getInstance();
-        dish= new Dish();
-        dish.setName("Quesadilla Rajas");
-        dish.setPrice(18);
-        dish.setWaiter("Waiter E");
-        order.addDish(dish);
 
-        order.printCheck();
+
+
+
+
+
+
+
+
+
+
     }
 
 

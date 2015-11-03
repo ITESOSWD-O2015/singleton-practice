@@ -49,8 +49,5 @@ public abstract class TableOrder {
             total += ds.getPrice();
         }
         System.out.println("Total: $" + total);
-
     }
-
-
 }

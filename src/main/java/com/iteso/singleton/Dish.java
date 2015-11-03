@@ -11,7 +11,6 @@ public class Dish {
     private float price;
     private String description;
     private String name;
-    private String waiter;
 
     public float getPrice() {
         return price;
@@ -37,11 +36,4 @@ public class Dish {
         this.name = name;
     }
 
-    public String getWaiter() {
-        return waiter;
-    }
-
-    public void setWaiter(String waiter) {
-        this.waiter = waiter;
-    }
 }
