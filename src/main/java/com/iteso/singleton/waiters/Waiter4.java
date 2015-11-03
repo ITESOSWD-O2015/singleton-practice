@@ -49,4 +49,5 @@ public class Waiter4 extends Waiter {
         table.clearDishes();
         table.clearDrinks();
     }
+    
 }
