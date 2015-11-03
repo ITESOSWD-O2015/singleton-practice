@@ -26,7 +26,7 @@ public abstract class TableOrder {
     public void addDrink (Drink drink) {
         drinks.add(drink);
     }
-    public void addDish (Dish dish) {
+    public void addDish (int dish) {
         dishes.add(dish);
     }
 
