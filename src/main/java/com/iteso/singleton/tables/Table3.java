@@ -22,7 +22,11 @@ public class Table3 extends TableOrder{
     }
     public static TableOrder getInstance(){
         if(uniqueInstance== null){
-            uniqueInstance = new Table3();
+            synchronized(Table1.class) {
+                if (uniqueInstance == null) {
+                    uniqueInstance = new Table3();
+                }
+            }
         }
         return uniqueInstance;
     }

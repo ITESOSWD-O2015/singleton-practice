@@ -20,9 +20,13 @@ public class Table1 extends TableOrder{
         drinks = new ArrayList();
         dishes = new ArrayList();
     }
-    public static TableOrder getInstance(){
+    public static  TableOrder getInstance(){
         if(uniqueInstance== null){
-            uniqueInstance = new Table1();
+            synchronized(Table1.class) {
+                if (uniqueInstance == null) {
+                    uniqueInstance = new Table1();
+                }
+            }
         }
         return uniqueInstance;
     }

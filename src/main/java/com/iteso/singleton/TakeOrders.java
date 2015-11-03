@@ -16,87 +16,45 @@ public class TakeOrders {
         TableOrder order;
         Drink drink;
         Dish dish;
+        Waiter1 w1=new Waiter1();
+        Waiter2 w2=new Waiter2();
+        Waiter3 w3=new Waiter3();
+        Waiter4 w4=new Waiter4();
+        drink = new Drink();
+        drink.setName("Coke");
+        drink.setWaiter(w1.getNombre());
+        drink.setPrice(10);
+        w1.addDrink(1, drink);
 
-        order = Table4.getInstance();
+        drink = new Drink();
+        drink.setName("Orange Juice");
+        drink.setWaiter(w3.getNombre());
+        drink.setPrice(6);
+        w3.addDrink(1, drink);
+
+        drink = new Drink();
+        drink.setName("Peach soda");
+        drink.setWaiter(w4.getNombre());
+        drink.setPrice(20);
+        w4.addDrink(1, drink);
 
         drink = new Drink();
         drink.setName("Coke");
-        drink.setWaiter("Waiter A");
-        drink.setPrice(10);
-        order.addDrink(drink);
-
-        order = Table1.getInstance();
-        drink = new Drink();
-        drink.setName("Coke");
-        drink.setWaiter("Waiter B");
-        drink.setPrice(10);
-        order.addDrink(drink);
-
-        order = Table4.getInstance();
-        drink = new Drink();
-        drink.setName("Coke");
-        drink.setWaiter("Waiter B");
-        drink.setPrice(10);
-        order.addDrink(drink);
-
-        order = Table4.getInstance();
+        drink.setWaiter(w1.getNombre());
+        drink.setPrice(12);
+        w1.addDrink(1, drink);
 
         dish = new Dish();
-        dish.setName("Enchilada");
-        dish.setPrice(8);
-        dish.setWaiter("Waiter C");
-        order.addDish(dish);
+        dish.setName("Tamales");
+        drink.setWaiter(w2.getNombre());
+        drink.setPrice(15);
+        w2.addDish(1, dish);
 
-        dish = new Dish();
-        dish.setName("Enchilada");
-        dish.setPrice(8);
-        dish.setWaiter("Waiter C");
-        order.addDish(dish);
 
-        order = Table4.getInstance();
-        dish = new Dish();
-        dish.setName("Chicken Pozole");
-        dish.setPrice(45);
-        dish.setWaiter("Waiter B");
-        order.addDish(dish);
+        w1.getCheck(1);
 
-        order = Table2.getInstance();
-        dish = new Dish();
-        dish.setName("Tostada de Pata");
-        dish.setPrice(28);
-        dish.setWaiter("Waiter D");
-        order.addDish(dish);
 
-        order = Table4.getInstance();
-        dish = new Dish();
-        dish.setName("Quesadilla Chicharron");
-        dish.setPrice(18);
-        dish.setWaiter("Waiter A");
-        order.addDish(dish);
 
-        order = Table4.getInstance();
-        dish = new Dish();
-        dish.setName("Tostada de Pata");
-        dish.setPrice(28);
-        dish.setWaiter("Waiter D");
-        order.addDish(dish);
-
-        order = Table1.getInstance();
-        order.printCheck();
-
-        order = Table4.getInstance();
-        order.printCheck();
-
-        Table4.clearOrder();
-
-        order = Table4.getInstance();
-        dish= new Dish();
-        dish.setName("Quesadilla Rajas");
-        dish.setPrice(18);
-        dish.setWaiter("Waiter E");
-        order.addDish(dish);
-
-        order.printCheck();
     }
 
 
