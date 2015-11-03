@@ -25,14 +25,14 @@ public class TakeOrders {
         drink.setPrice(10);
         order.addDrink(drink);
 
-        order = Table1.getInstance();
+        order = Table4.getInstance();
         drink = new Drink();
         drink.setName("Coke");
         drink.setWaiter("Waiter B");
         drink.setPrice(10);
         order.addDrink(drink);
 
-        order = Table4.getInstance();
+        order = Table1.getInstance();
         drink = new Drink();
         drink.setName("Coke");
         drink.setWaiter("Waiter B");
