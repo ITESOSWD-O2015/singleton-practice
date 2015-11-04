@@ -1,13 +1,5 @@
 package com.iteso.singleton;
 
-import com.iteso.singleton.tables.Table1;
-import com.iteso.singleton.tables.Table2;
-import com.iteso.singleton.tables.Table4;
-import com.iteso.singleton.waiters.WaiterA;
-import com.iteso.singleton.waiters.WaiterB;
-import com.iteso.singleton.waiters.WaiterC;
-import com.iteso.singleton.waiters.WaiterD;
-
 /**
  * Created with IntelliJ IDEA.
  * User: rvillalobos
@@ -19,14 +11,13 @@ public class TakeOrders {
     public static void main (String[] args){
         Drink drink;
         Dish dish;
-        Waiter waiterA = new WaiterA();
-        Waiter waiterB = new WaiterB();
-        Waiter waiterC = new WaiterC();
-        Waiter waiterD = new WaiterD();
+        Waiter waiterA = new Waiter("waiter A", 5000);
+        Waiter waiterB = new Waiter("Waiter B", 2500);
+        Waiter waiterC = new Waiter("Waiter C", 1000);
+        Waiter waiterD = new Waiter("Waiter D", 3500);
 
         drink = new Drink();
         drink.setName("Coke");
-        drink.setWaiter("Waiter A");
         drink.setPrice(10);
         waiterA.addDrink(drink, 4);
 
