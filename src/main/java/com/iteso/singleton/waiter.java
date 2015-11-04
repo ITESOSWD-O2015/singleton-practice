@@ -1,4 +1,4 @@
-package com.iteso.singleton.waiters;
+package com.iteso.singleton;
 
 import com.iteso.singleton.Dish;
 import com.iteso.singleton.Drink;
@@ -12,7 +12,6 @@ import com.iteso.singleton.tables.Table4;
  * Created by Paloma on 03/11/2015.
  */
 public abstract class waiter extends Thread{
-    private TableOrder table;
 
     public abstract void addDrink(Drink drink, int table_num);
 
@@ -29,10 +28,5 @@ public abstract class waiter extends Thread{
             return Table4.getInstance();
     }
 
-    public void GiveMeTheCheck(int table_num){
-        table = getTableInstance(table_num);
-        table.printCheck();
-        table.clearDishes();
-        table.clearDrinks();
-    }
+    public abstract boolean GiveMeTheCheck(int table_num);
 }
