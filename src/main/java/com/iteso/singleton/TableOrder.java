@@ -35,17 +35,17 @@ public abstract class TableOrder {
         Drink dr;
         Dish ds;
         int i;
-        System.out.println("Check for " + tableName);
+        System.out.println("\nCheck for " + tableName);
         System.out.println("Drinks:");
         for (i = 0; i < drinks.size(); i++){
             dr = (Drink) drinks.get(i);
-            System.out.println(dr.getWaiter() + ": " + dr.getName()+ " " + dr.getPrice());
+            System.out.println("\t" + dr.getName()+ " " + dr.getPrice());
             total += dr.getPrice();
         }
         System.out.println("Dishes:");
         for (i = 0; i < dishes.size(); i++){
             ds = (Dish) dishes.get(i);
-            System.out.println(ds.getWaiter() + ": " + ds.getName()+ " " + ds.getPrice());
+            System.out.println("\t" +ds.getName()+ " " + ds.getPrice());
             total += ds.getPrice();
         }
         System.out.println("Total: $" + total);
