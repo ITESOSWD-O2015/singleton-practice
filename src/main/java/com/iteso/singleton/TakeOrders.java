@@ -26,36 +26,44 @@ public class TakeOrders {
 
         Drink horchata   = new Drink();
         horchata.setName("horchata"); //setName("horchata");
+        horchata.setDescription("agua de sabor");
         horchata.setPrice(10);
 
         Drink jamaica    = new Drink();
         jamaica.setName("jamaica");
+        jamaica.setDescription("agua de sabor");
         jamaica.setPrice(15);
 
         Drink limonada   = new Drink();
         limonada.setName("limonada");
+        limonada.setDescription("agua de sabor");
         limonada.setPrice(8);
 
         Drink tonicol    = new Drink();
         tonicol.setName("tonicol");
+        tonicol.setDescription("refresco");
         tonicol.setPrice(6);
 
         /* DISHES SOLD AT THE RESTAURANT AND THEIR PRICE*/
 
         Dish menudo     = new Dish();
         menudo.setName("menudo");
+        menudo.setDescription("comida mexicana");
         menudo.setPrice(55);
 
         Dish pozole     = new Dish();
         pozole.setName("pozole");
+        menudo.setDescription("comida mexicana");
         pozole.setPrice(40);
 
         Dish gordita    = new Dish();
         gordita.setName("gordita");
+        menudo.setDescription("comida mexicana");
         gordita.setPrice(20);
 
-        Dish taco       = new Dish();
+        Dish taco = new Dish();
         taco.setName("taco");
+        menudo.setDescription("comida mexicana");
         taco.setPrice(10);
 
         /* ORDERS */

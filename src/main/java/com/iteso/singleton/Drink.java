@@ -14,11 +14,15 @@ public class Drink {
     private String waiter;
 
     public float getPrice() {
-        return price;
+        if((price>=0))
+            return price;
+        else return -1; // (error)
     }
 
     public void setPrice(float price) {
-        this.price = price;
+        if (price>=0)
+            this.price = price;
+        else this.price= -1 ; // error
     }
 
     public String getDescription() {
@@ -35,13 +39,5 @@ public class Drink {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getWaiter() {
-        return waiter;
-    }
-
-    public void setWaiter(String waiter) {
-        this.waiter = waiter;
     }
 }

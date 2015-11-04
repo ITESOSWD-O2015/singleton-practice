@@ -12,7 +12,7 @@ public class waiter_D extends waiter {
     private TableOrder tableOrder;
 
     @Override
-    public void addDrink(Drink drink, int table_num){
+    public boolean addDrink(Drink drink, int table_num){
         try{
             waiter_A.sleep(2000);
         } catch (InterruptedException e) {
@@ -21,11 +21,12 @@ public class waiter_D extends waiter {
 
         tableOrder =  getTableInstance(table_num);
         tableOrder.addDrink(drink);
-        System.out.println("Bebida " + drink.getName() +" agregada a la cuenta de la mesa " + tableOrder.tableName +" por el mesero D");
+        System.out.println("Bebida " + drink.getDescription() + drink.getName() +" agregada a la cuenta de la mesa " + tableOrder.tableName +" por el mesero D");
+        return true;
     }
 
     @Override
-    public void addDish(Dish dish, int table_num) {
+    public boolean addDish(Dish dish, int table_num) {
         try{
             waiter_A.sleep(7000);
         } catch (InterruptedException e) {
@@ -34,7 +35,8 @@ public class waiter_D extends waiter {
 
         tableOrder =  getTableInstance(table_num);
         tableOrder.addDish(dish);
-        System.out.println("Platillo " + dish.getName() +" agregada a la cuenta de la mesa " + tableOrder.tableName +" por el mesero D");
+        System.out.println("Platillo " + dish.getDescription() + dish.getName() +" agregada a la cuenta de la mesa " + tableOrder.tableName +" por el mesero D");
+        return true;
     }
 
     public boolean GiveMeTheCheck(int table_num){

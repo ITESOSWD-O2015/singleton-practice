@@ -13,9 +13,9 @@ import com.iteso.singleton.tables.Table4;
  */
 public abstract class waiter extends Thread{
 
-    public abstract void addDrink(Drink drink, int table_num);
+    public abstract boolean addDrink(Drink drink, int table_num);
 
-    public abstract void addDish(Dish dish, int table_num);
+    public abstract boolean addDish(Dish dish, int table_num);
 
     public TableOrder getTableInstance(int table_num){
         if(table_num ==1)
