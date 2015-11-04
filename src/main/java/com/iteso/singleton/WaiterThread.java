@@ -3,25 +3,10 @@ package com.iteso.singleton;
 /**
  * Created by jose luis on 03/11/2015.
  */
-public class WaiterThread extends TableOrder {
+public abstract class WaiterThread extends Thread {
 
-private static WaiterThread instance;
-
-    private void addDrink (){
-
-    }
-
-    private void addDish (){
-
-    }
-
-    public void printCheck
-
-    public static synchronized WaiterThread getInstance(){
-        if(instance == null){
-            instance = new WaiterThread();
-
-        }return instance;
-    }
+        public abstract void addDrink(int TableID, Drink drink);
+        public abstract void addDish(int TableID, Dish dish);
+        public abstract void CheckOrder(int TableID);
 
 }

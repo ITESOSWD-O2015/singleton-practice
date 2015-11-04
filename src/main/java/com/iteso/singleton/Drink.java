@@ -37,11 +37,5 @@ public class Drink {
         this.name = name;
     }
 
-    public String getWaiter() {
-        return waiter;
-    }
 
-    public void setWaiter(String waiter) {
-        this.waiter = waiter;
-    }
 }

@@ -1,8 +1,9 @@
 package com.iteso.singleton;
 
-import com.iteso.singleton.tables.Table1;
-import com.iteso.singleton.tables.Table2;
-import com.iteso.singleton.tables.Table4;
+import com.iteso.singleton.Waiters.Waiter1;
+import com.iteso.singleton.Waiters.Waiter2;
+import com.iteso.singleton.Waiters.Waiter3;
+import com.iteso.singleton.Waiters.Waiter4;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,92 +13,60 @@ import com.iteso.singleton.tables.Table4;
  * To change this template use File | Settings | File Templates.
  */
 public class TakeOrders {
-    public static void main (String[] args){
-        TableOrder order;
+    public static void main (String[] args) {
+
         Drink drink;
         Dish dish;
 
-        order = Table4.getInstance();
+        WaiterThread waiter1 = new Waiter1();
+        WaiterThread waiter2 = new Waiter2();
+        WaiterThread waiter3 = new Waiter3();
+        WaiterThread waiter4 = new Waiter4();
 
         drink = new Drink();
-        drink.setName("Coke");
-        drink.setWaiter("Waiter A");
-        drink.setPrice(10);
-        order.addDrink(drink);
+        drink.setName("Horchata Water");
+        drink.setPrice(22);
+        waiter1.addDrink(1, drink);
 
-        order = Table1.getInstance();
         drink = new Drink();
-        drink.setName("Coke");
-        drink.setWaiter("Waiter B");
-        drink.setPrice(10);
-        order.addDrink(drink);
+        drink.setName("Boing Mango");
+        drink.setPrice(15);
+        waiter2.addDrink(3, drink);
 
-        order = Table4.getInstance();
         drink = new Drink();
-        drink.setName("Coke");
-        drink.setWaiter("Waiter B");
-        drink.setPrice(10);
-        order.addDrink(drink);
+        drink.setName("Fanta");
+        drink.setPrice(17);
+        waiter3.addDrink(1, drink);
 
-        order = Table4.getInstance();
-
-        dish = new Dish();
-        dish.setName("Enchilada");
-        dish.setPrice(8);
-        dish.setWaiter("Waiter C");
-        order.addDish(dish);
+        drink = new Drink();
+        drink.setName("Jamaica Water");
+        drink.setPrice(22);
+        waiter4.addDrink(1, drink);
 
         dish = new Dish();
-        dish.setName("Enchilada");
-        dish.setPrice(8);
-        dish.setWaiter("Waiter C");
-        order.addDish(dish);
+        dish.setName("Orden Pata de Mula");
+        dish.setPrice(80);
+        waiter1.addDish(2, dish);
 
-        order = Table4.getInstance();
         dish = new Dish();
-        dish.setName("Chicken Pozole");
-        dish.setPrice(45);
-        dish.setWaiter("Waiter B");
-        order.addDish(dish);
+        dish.setName("Coctel Grande");
+        dish.setPrice(80);
+        waiter2.addDish(2, dish);
 
-        order = Table2.getInstance();
         dish = new Dish();
-        dish.setName("Tostada de Pata");
-        dish.setPrice(28);
-        dish.setWaiter("Waiter D");
-        order.addDish(dish);
+        dish.setName("Tostada Ceviche");
+        dish.setPrice(80);
+        waiter3.addDish(2, dish);
 
-        order = Table4.getInstance();
         dish = new Dish();
-        dish.setName("Quesadilla Chicharron");
-        dish.setPrice(18);
-        dish.setWaiter("Waiter A");
-        order.addDish(dish);
+        dish.setName("Orden Aguachile");
+        dish.setPrice(80);
+        waiter4.addDish(2, dish);
 
-        order = Table4.getInstance();
-        dish = new Dish();
-        dish.setName("Tostada de Pata");
-        dish.setPrice(28);
-        dish.setWaiter("Waiter D");
-        order.addDish(dish);
 
-        order = Table1.getInstance();
-        order.printCheck();
-
-        order = Table4.getInstance();
-        order.printCheck();
-
-        Table4.clearOrder();
-
-        order = Table4.getInstance();
-        dish= new Dish();
-        dish.setName("Quesadilla Rajas");
-        dish.setPrice(18);
-        dish.setWaiter("Waiter E");
-        order.addDish(dish);
-
-        order.printCheck();
+        waiter1.CheckOrder(1);
+        waiter2.CheckOrder(2);
+        waiter3.CheckOrder(3);
+        waiter4.CheckOrder(4);
     }
-
-
 }

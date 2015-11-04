@@ -20,7 +20,7 @@ public class Table2 extends TableOrder{
         drinks = new ArrayList();
         dishes = new ArrayList();
     }
-    public static TableOrder getInstance(){
+    public static synchronized TableOrder getInstance(){
         if(uniqueInstance== null){
             uniqueInstance = new Table2();
         }
