@@ -30,7 +30,7 @@ public abstract class TableOrder {
         dishes.add(dish);
     }
 
-    public void printCheck(){
+    public boolean printCheck(){
         float total = 0;
         Drink dr;
         Dish ds;
@@ -49,7 +49,7 @@ public abstract class TableOrder {
             total += ds.getPrice();
         }
         System.out.println("Total: $" + total);
-
+        return true;
     }
 
 
